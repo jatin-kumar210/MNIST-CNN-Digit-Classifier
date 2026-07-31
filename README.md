@@ -1,30 +1,37 @@
-# CNN Digit Recognizer — Streamlit UI
+# 🔢 CNN Digit Recognizer
 
-A simple Streamlit UI for the MNIST CNN model trained in your notebook (`cnn.ipynb`), which saves the model as `cnn_model.keras`.
+A Deep Learning based **Handwritten Digit Recognition System** built using **Convolutional Neural Networks (CNN)**. The model is trained on the **MNIST dataset** to accurately classify handwritten digits (0-9) and provides real-time predictions through an interactive interface.
 
-## Setup
+---
 
-1. Make sure `cnn_model.keras` (produced at the end of your notebook via `cnn.save("cnn_model.keras")`) is in the **same folder** as `app.py`.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the app:
-   ```bash
-   streamlit run app.py
-   ```
+## 🚀 Project Overview
 
-## Features
+Handwritten digit recognition is one of the most popular applications of computer vision and deep learning. This project uses a **CNN architecture** to automatically learn important image features and classify handwritten digits with high accuracy.
 
-- **Draw a digit** directly on an in-browser canvas, or **upload an image** of a handwritten digit.
-- Automatically preprocesses input to match the notebook's pipeline: grayscale → resize to 28x28 → normalize to `[0, 1]` → reshape to `(1, 28, 28, 1)`.
-- Auto-inverts colors if you upload a black-on-white image (MNIST digits are white-on-black).
-- Shows the predicted digit, confidence score, and full probability bar chart for all 10 classes.
+The model takes a **28×28 grayscale image** as input and predicts the corresponding digit from **0 to 9**.
 
-## Notes
+---
 
-- The canvas input uses `streamlit-drawable-canvas`, which needs an internet connection the first time `pip install` runs.
-- If the model file has a different name/path, update this line in `app.py`:
-  ```python
-  model = tf.keras.models.load_model("cnn_model.keras")
-  ```
+## 🎯 Features
+
+✅ Deep Learning based digit classification  
+✅ Convolutional Neural Network architecture  
+✅ Trained on MNIST handwritten digit dataset  
+✅ Image preprocessing and normalization  
+✅ High accuracy digit prediction  
+✅ Interactive digit recognition interface  
+✅ Fast real-time inference  
+
+---
+
+## 🧠 Model Architecture
+
+The CNN model consists of:
+
+- **Convolutional Layers** → Extract image features
+- **Max Pooling Layers** → Reduce dimensionality
+- **Flatten Layer** → Convert feature maps into vectors
+- **Dense Layers** → Perform classification
+- **Softmax Activation** → Predict probability for 10 classes
+
+### Architecture:
